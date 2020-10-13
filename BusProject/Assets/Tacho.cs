@@ -19,7 +19,9 @@ public class Tacho : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = targetObject.GetComponent<Rigidbody>().velocity.magnitude;
+        Vector3 velocity = targetObject.GetComponent<Rigidbody>().velocity;
+        //float speed = velocity.magnitude; //In all axis
+        float speed = (new Vector3(velocity.x, 0, velocity.z)).magnitude; // Only in XZ plane
         needle.rotation = Quaternion.Euler(0, 0, CalcAngle(speed));
     }
 
@@ -34,6 +36,7 @@ public class Tacho : MonoBehaviour
             number.eulerAngles = Vector3.zero;
             lable.SetActive(true);
         }
+        gameObject.transform.Find("Needle").SetAsLastSibling();
     }
     public float CalcAngle(float speed) {
         return (45 - (speed * 270 / maxLabel));
