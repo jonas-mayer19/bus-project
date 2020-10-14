@@ -2110,6 +2110,7 @@ GameObject:
   - component: {fileID: 7107350321745397845}
   - component: {fileID: 6928694438876609565}
   - component: {fileID: 7219581913897469149}
+  - component: {fileID: 7303529192270791813}
   m_Layer: 0
   m_Name: Bus
   m_TagString: Untagged
@@ -2164,6 +2165,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.55, y: 3.3, z: 12.3}
   m_Center: {x: 0, y: 1.6, z: 0}
+--- !u!114 &7303529192270791813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107350321745397842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b339880b0d6d748916ae6bbb383b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 3
 --- !u!1 &7107350321746809350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,6 +2359,7 @@ GameObject:
   - component: {fileID: 7107350321902451184}
   - component: {fileID: 7107350321902451185}
   - component: {fileID: 7107350321902450958}
+  - component: {fileID: 240650139130674052}
   m_Layer: 0
   m_Name: RearRightWheel
   m_TagString: Untagged
@@ -2444,6 +2459,18 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!114 &240650139130674052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107350321902450959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f2b1aa28295eb4f9c7604fcedda679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7107350321919484790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3601,6 +3628,7 @@ GameObject:
   - component: {fileID: 7107350322255728720}
   - component: {fileID: 7107350322255728721}
   - component: {fileID: 7107350322255728750}
+  - component: {fileID: 3157772754933338087}
   m_Layer: 0
   m_Name: RearLeftWheel
   m_TagString: Untagged
@@ -3700,6 +3728,18 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!114 &3157772754933338087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107350322255728751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f2b1aa28295eb4f9c7604fcedda679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7107350322282528960
 GameObject:
   m_ObjectHideFlags: 0
