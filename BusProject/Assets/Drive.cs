@@ -17,7 +17,7 @@ public class Drive : MonoBehaviour
         if(Input.GetKey("up"))
         {
             Rotation(true);                                                                  
-            this.transform.Translate(direction[0].normalized * velocity * Time.deltaTime );      //Translation zur Objektverschiebung auf Basis der Objektkoordinaten
+            //this.transform.Translate(direction[0].normalized * velocity * Time.deltaTime );      //Translation zur Objektverschiebung auf Basis der Objektkoordinaten
         }
         else if (Input.GetKey("down"))
         {
