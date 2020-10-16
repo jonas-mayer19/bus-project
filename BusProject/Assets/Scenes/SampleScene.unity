@@ -102930,6 +102930,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7107350321631068764, guid: 1df62df64abc54c45928746236746d4a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7107350321631068765, guid: 1df62df64abc54c45928746236746d4a,
         type: 3}
       propertyPath: m_Name
@@ -103004,6 +103009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107350321902450958, guid: 1df62df64abc54c45928746236746d4a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7107350321902450959, guid: 1df62df64abc54c45928746236746d4a,
         type: 3}
@@ -103090,6 +103100,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7107350322255728750, guid: 1df62df64abc54c45928746236746d4a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7107350322255728751, guid: 1df62df64abc54c45928746236746d4a,
         type: 3}
       propertyPath: m_Name
@@ -103119,6 +103134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107350323433477150, guid: 1df62df64abc54c45928746236746d4a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7107350323433477151, guid: 1df62df64abc54c45928746236746d4a,
         type: 3}

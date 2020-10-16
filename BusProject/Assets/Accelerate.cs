@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,7 +28,11 @@ public class Accelerate : MonoBehaviour
         // Bus ausrollen lassen
         else if (Input.GetAxis("Vertical") == 0 && currentVelocity != 0)
         {
-            if (currentVelocity < 0)
+            if (Math.Abs(currentVelocity) < 1)
+            {
+                currentVelocity = 0;
+            }
+            else if (currentVelocity < 0)
             {
                 currentVelocity++;
             }
