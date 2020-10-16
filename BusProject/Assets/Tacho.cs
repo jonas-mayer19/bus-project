@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,27 +10,21 @@ public class Tacho : MonoBehaviour
     public int divisions;
     public int maxLabel;
     private Transform needle;
-    private Vector3 lastPos;
-    private Vector3 currPos;
+    private Accelerate accelerate;
     // Start is called before the first frame update
     void Start()
     {
         ShowTacho(true);
         GenerateLables();
         needle = gameObject.transform.Find("Needle");
-        lastPos = targetObject.transform.position;
+        accelerate = targetObject.GetComponent<Accelerate>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Vector3 velocity = targetObject.GetComponent<Rigidbody>().velocity; //using rigidbody
-        //float speed = (new Vector3(velocity.x, 0, velocity.z)).magnitude; // Only in XZ plane using rigidbody
-        currPos = targetObject.transform.position;
-        Vector3 travel = (currPos - lastPos); //using travel over time        
-        float speed = (new Vector3(travel.x, 0, travel.z)).magnitude / Time.deltaTime; // Only in XZ plane using travel over time
+        float speed = Math.Abs(accelerate.currentVelocity * 3.6f);
         needle.rotation = Quaternion.Euler(0, 0, CalcAngle(speed));
-        lastPos = currPos;
     }
 
     public void GenerateLables()
