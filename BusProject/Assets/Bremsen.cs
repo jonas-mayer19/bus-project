@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bremse : MonoBehaviour
+public class Bremsen : MonoBehaviour
 {
 
     float keyPressedTimer()

@@ -17,12 +17,24 @@ public class Accelerate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Abfragen ob Bus nach vorne fahren soll
+        // Beschleunigen
         if (Input.GetAxis("Vertical") > 0)
         {
             if (currentVelocity < maxVelocity)
             {
-                currentVelocity += 0.5f;
+                currentVelocity += 0.25f;
+            }
+        }
+        // Bremsen und rückwärts fahren
+        else if (Input.GetAxis("Vertical") < 0)
+        {
+            if (currentVelocity > 0)
+            {
+                currentVelocity--;
+            }
+            else if (currentVelocity <= 0 && Math.Abs(currentVelocity) < maxVelocity / 2)
+            {
+                currentVelocity -= 0.1f;
             }
         }
         // Bus ausrollen lassen
@@ -38,7 +50,7 @@ public class Accelerate : MonoBehaviour
             }
             else
             {
-                currentVelocity--;
+                currentVelocity -= 0.5f;
             }
         }
 

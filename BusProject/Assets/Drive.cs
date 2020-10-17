@@ -14,15 +14,16 @@ public class Drive : MonoBehaviour
 
     private void Move()
     {
-        if(Input.GetKey("up"))
+        float currentVelocity = GetComponent<Accelerate>().currentVelocity;
+        if(currentVelocity > 0)
         {
             Rotation(true);                                                                  
-            this.transform.Translate(direction[0].normalized * velocity * Time.deltaTime );      //Translation zur Objektverschiebung auf Basis der Objektkoordinaten
+            //this.transform.Translate(direction[0].normalized * velocity * Time.deltaTime );      //Translation zur Objektverschiebung auf Basis der Objektkoordinaten
         }
-        else if (Input.GetKey("down"))
+        else if(currentVelocity < 0)
         {
             Rotation(false);
-            this.transform.Translate(direction[1].normalized * velocity * Time.deltaTime );
+            //this.transform.Translate(direction[1].normalized * velocity * Time.deltaTime );
         }      
     }
     private void Rotation(bool r)                                                               //boolean zur Unterscheidung von Vor- und Rückwärtsfahren
