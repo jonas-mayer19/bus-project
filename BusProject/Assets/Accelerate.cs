@@ -7,10 +7,14 @@ public class Accelerate : MonoBehaviour
 {
     public float currentVelocity = 0.0f;
     public float maxVelocity = 30;
+    GameObject bus;
+    Rigidbody bus_rigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
+        bus = GameObject.Find("Bus");
+        bus_rigidbody = bus.GetComponent<Rigidbody>();
 
     }
 
@@ -23,6 +27,7 @@ public class Accelerate : MonoBehaviour
             if (currentVelocity < maxVelocity)
             {
                 currentVelocity += 0.25f;
+                bus_rigidbody.AddForce(0,-50,0, ForceMode.Impulse);
             }
         }
         // Bremsen und rückwärts fahren
@@ -52,8 +57,10 @@ public class Accelerate : MonoBehaviour
             {
                 currentVelocity -= 0.5f;
             }
+            bus_rigidbody.AddForce(0, 50, 0, ForceMode.Impulse);
         }
 
         this.transform.Translate(new Vector3(0, 0, -1) * currentVelocity * Time.deltaTime);
+        
     }
 }
