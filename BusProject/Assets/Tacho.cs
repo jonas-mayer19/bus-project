@@ -10,14 +10,14 @@ public class Tacho : MonoBehaviour
     public int divisions;
     public int maxLabel;
     private Transform needle;
-    private Accelerate accelerate;
+    private Drive accelerate;
     // Start is called before the first frame update
     void Start()
     {
         ShowTacho(true);
         GenerateLables();
         needle = gameObject.transform.Find("Needle");
-        accelerate = targetObject.GetComponent<Accelerate>();
+        accelerate = targetObject.GetComponent<Drive>();
     }
 
     // Update is called once per frame
